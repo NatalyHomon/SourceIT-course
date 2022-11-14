@@ -23,24 +23,27 @@ printRow("*", "_", 5, "", "");
 
 // Практична робота 3.6
 
-  function printNumbers(nums, cols){
+ function printNumbers(nums, cols){
     let rows = nums/cols;
-  
     
-
     for(let i = 1; i<= rows; i++){
         let base = i;
-        let result = ``;
+        let number = 0;
+        let space = " ";
+        let total =``;
 
-          for(let j = 1; j <= cols; j++){
-            if(j===1){
-              result += `${base} ` ;
-            }else{
-              result += `${base + rows} `; //something missing
-            }
-            
-          }
-      console.log(result);
+        for(let j = 1; j <= cols; j++){
+          
+           if(j===1){
+            number += base;
+            total += number}
+                   
+           else{ number += rows;
+            total += number};
+
+            total+= space;
+        }
+      console.log(total);
     }
     
   };
